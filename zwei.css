@@ -1,0 +1,19 @@
+body {
+ background-color: azure;
+}
+.puk::placeholder {
+ color: beige;
+
+}
+.puk {
+    background-color: rgb(135, 178, 178);
+    /* padding: 0; */
+}
+.puk2 input {
+    accent-color: rgb(39, 230, 205);
+
+}
+.custom-checkbox+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;

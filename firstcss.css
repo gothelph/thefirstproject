@@ -1,0 +1,128 @@
+.container1 {
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+.setka {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* width: 600px; */
+}
+.first {
+  /* cursor: pointer; */
+  display: flex;
+  width: 200px;
+  height: 200px;
+}
+.punki {
+  width: 200px;
+  position: absolute;
+}
+.punki img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+.punki :hover {
+  /* display: none; */
+  opacity: 10%;
+  transition: all 0.4s;
+}
+.punk {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  background-color: rgb(251, 193, 244);
+}
+
+.styles {
+  display: flex;
+  justify-content: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+}
+/* @media screen and (min-width: 800px) {
+  .setka {
+    grid-template-columns: repeat(3, 1fr);
+  }
+} */
+@media screen and (max-width: 800px) {
+  .setka {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* .setka::after {
+    content: "";
+    background-color: blueviolet;
+  } */
+
+  /* .setka > .first:last-child {
+    display: none;
+  } */
+
+  .setka > .first:last-child {
+    grid-column: span 2;
+    width: 400px;
+  }
+  .setka > .first:last-child .punki {
+    width: 400px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .setka {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .setka > .first:last-child {
+    grid-column: span 1;
+    width: 200px;
+  }
+  .setka > .first:last-child .punki {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.container3 {
+  display: flex;
+  width: 600px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container4 {
+  height: 200px;
+  width: 200px;
+  display: flex;
+}
+.container5 {
+  position: absolute;
+}
+.container5 img {
+  width: 100%;
+  object-fit: cover;
+  height: 200px;
+}
+.container6 {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  background-color: rgb(148, 248, 193);
+}
+.container5 :hover {
+  opacity: 10%;
+  transition: all 0.5s;
+}
+.block1 {
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+}
+.input {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}

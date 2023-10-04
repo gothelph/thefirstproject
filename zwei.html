@@ -1,0 +1,119 @@
+<link rel="stylesheet" type="text/css" href="./zwei.css"/>
+<style>
+    .you{
+        cursor: pointer;
+        width: 100px;
+        height: 40px;
+        background-color: brown;
+        transition: 0.3 s;
+        font-size: 1rem;
+        color: white
+    }
+    .you:hover{
+        transform: translateX(150px);
+        background-color: blueviolet;
+
+    }
+</style>
+
+<body>
+<h1>Привет, смертный</h1>
+<p>Ты на тестовой странице для проверки твоей долбаебности </p>
+
+<form action="what kind of action">
+
+   <label for="text">Ответь мне</label>
+    <input name="kartoshka123" type="text" placeholder="ты долбаеб?..." class="puk">
+    <input type="checkbox">
+    <br>
+    <div class="puk2">
+    <label for="radio">Сомневаюсь</label>
+    <input type="radio" name="samtakoi">
+    <label for="radio">Потому что я смотрю аниме</label>
+    <input type="radio" name="samtakoi">
+    <label for="radio">Точно долбаеб</label>
+    <input type="radio" name="samtakoi">
+    <br>
+    <label for="date">дата регистрации долбаеба</label>
+    <br>
+    <input name="kartoshka321" type="date">
+
+</form>
+<div>
+    <img src="00230-4001338223-european gothoc girl with closed eyes, long hair, cyberpunk style, colorful skin, acrylic art with leaking paint.jpg" alt="tits" width="320" height="320">
+</div>
+
+
+<form action="">
+    <label for="text">Логин долбаеба</label>
+    <br>
+    <input name="kartoshka3212" type="text">
+    <br>
+    <label for="password">Номер карточки и сив</label>
+    <br>
+    <input name="perovo" type="password">
+    <label for="button">Отправить данные мошенникам</label>
+    <button>Отправить</button>
+
+
+</form>
+<video src=""></video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KCiUbZSTuBs?si=JH1WuMcpU3WRUxq-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<div>
+<button class="you" type="button" id="you">you</button>
+</div>
+<div id="container"></div>
+</body>
+
+<script>
+    const btn = document.getElementById("you")
+     setTimeout(() => {
+         btn.style.backgroundColor="#FF0000"
+     }, 3000)
+     btn.addEventListener('click', () => {
+         alert('fuck you!')
+         })
+
+    function genColor (){
+
+        const red = Math.round(Math.random()* 255)
+        const green = Math.round(Math.random()* 255)
+        const blue = Math.round(Math.random()* 255)
+
+        return {red, green, blue}
+    }
+
+    function getFromPallet (){
+
+        const pallet = ["#564044", '#5F464B', "#77484A", "#8E4A49", "#867A6E", "#7DAA92", "#7FD5BF", "#80FFEC", "#C2FBEF", "#C8FBF0"]
+        const pick = Math.round(Math.random()* pallet.length)
+        return pallet[pick]
+    }
+
+    const container = document.getElementById("container")
+    for(let i =0; i < 30; i++ ){
+        const row = document.createElement("div")
+        row.style.display = 'flex'
+        container.appendChild(row)
+
+        for(let j = 0; j< 30; j++){
+            const myEl = document.createElement("div")
+            myEl.style.width = "18px"
+            myEl.style.height = "18px"
+            myEl.style.border= '1px solid gray'
+            const color = getFromPallet()
+            myEl.style.backgroundColor = color
+            myEl.style.transition = '1s'
+            const time = Math.round(Math.random()*5)*1000
+            setInterval(() => {
+                const color = getFromPallet()
+                myEl.style.backgroundColor = color
+            }, time)
+            
+            row.appendChild(myEl)
+        }
+        
+    }
+
+
+</script>
